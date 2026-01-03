@@ -1,5 +1,5 @@
 # lsp-mcp-rs configuration
-# Add any LSP server in 4 lines
+# 6 language servers configured
 
 [servers.lua]
 command = "C:/PhiDEX/tools/lua-language-server/bin/lua-language-server.exe"
@@ -7,26 +7,26 @@ args = ["--stdio", "--configpath=C:/PhiDEX/tools/lua-language-server/wow.luarc.j
 extensions = [".lua"]
 
 [servers.rust]
-command = "rust-analyzer"
+command = "C:/Users/Stryker_LOCAL/.cargo/bin/rust-analyzer.exe"
 args = []
 extensions = [".rs"]
 
-[servers.python]
-command = "pyright-langserver"
-args = ["--stdio"]
-extensions = [".py", ".pyi"]
-
-[servers.typescript]
-command = "typescript-language-server"
-args = ["--stdio"]
-extensions = [".ts", ".tsx", ".js", ".jsx"]
-
 [servers.go]
-command = "gopls"
+command = "C:/Users/Stryker/go/bin/gopls.exe"
 args = ["serve"]
 extensions = [".go"]
 
 [servers.c]
-command = "clangd"
+command = "C:/PhiDEX/tools/clangd/clangd_19.1.2/bin/clangd.exe"
 args = []
 extensions = [".c", ".h", ".cpp", ".hpp", ".cc", ".cxx"]
+
+[servers.python]
+command = "C:/Users/Stryker/AppData/Local/nvm/v22.21.0/node.exe"
+args = ["C:/Users/Stryker/AppData/Local/nvm/v22.21.0/node_modules/pyright/langserver.index.js", "--stdio"]
+extensions = [".py", ".pyi"]
+
+[servers.typescript]
+command = "C:/Users/Stryker/AppData/Local/nvm/v22.21.0/node.exe"
+args = ["C:/Users/Stryker/AppData/Local/nvm/v22.21.0/node_modules/typescript-language-server/lib/cli.mjs", "--stdio"]
+extensions = [".ts", ".tsx", ".js", ".jsx"]
