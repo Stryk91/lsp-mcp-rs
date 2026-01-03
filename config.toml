@@ -1,0 +1,32 @@
+# lsp-mcp-rs configuration
+# Add any LSP server in 4 lines
+
+[servers.lua]
+command = "C:/PhiDEX/tools/lua-language-server/bin/lua-language-server.exe"
+args = ["--stdio", "--configpath=C:/PhiDEX/tools/lua-language-server/wow.luarc.json"]
+extensions = [".lua"]
+
+[servers.rust]
+command = "rust-analyzer"
+args = []
+extensions = [".rs"]
+
+[servers.python]
+command = "pyright-langserver"
+args = ["--stdio"]
+extensions = [".py", ".pyi"]
+
+[servers.typescript]
+command = "typescript-language-server"
+args = ["--stdio"]
+extensions = [".ts", ".tsx", ".js", ".jsx"]
+
+[servers.go]
+command = "gopls"
+args = ["serve"]
+extensions = [".go"]
+
+[servers.c]
+command = "clangd"
+args = []
+extensions = [".c", ".h", ".cpp", ".hpp", ".cc", ".cxx"]
